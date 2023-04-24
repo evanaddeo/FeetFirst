@@ -1,0 +1,41 @@
+.shoe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .shoe-item-image {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .shoe-item-name {
+    margin-top: 10px;
+    color: #B03E3E;
+  }
+  
+  .shoe-item-price {
+    font-weight: bold;
+    color: #B03E3E
+  }
+  
+  .shoe-item-input {
+    margin-right: 10px;
+  }
+  
+  .shoe-item-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #FB4545;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .shoe-item-button:hover {
+    background-color: #B03E3E;
+  }
+  

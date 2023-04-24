@@ -1,0 +1,183 @@
+.App {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #FB4545;
+    height: 100vh;
+  }
+  
+  .border {
+    background-color: #F9BD4A;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 30px;
+  }
+  
+  #content {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  #collection {
+    background-color: #FB4545;
+    display: flex;
+    flex: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    justify-content: center;
+    margin: 30px;
+    padding-bottom: 15px;
+    height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+  }
+  
+  #collection:hover{
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  #types {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 60vh;
+    justify-content: space-evenly;
+  }
+  
+  .page:hover {
+    border: 5px solid #F9BD4A;
+    color: #FB4545;
+  }
+  
+  #logo {
+    height: 70px;
+  }
+  
+  .pics {
+    height: 120px;
+    width: 180px;
+  }
+  
+  .page {
+    border: 5px solid #FB4545;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    background-color: #F9BD4A;
+    border-radius: 15px;
+  }
+  
+  #bball {
+    width: 180px;
+    height: 110px;
+    margin: 10px;
+  }
+  
+  #force {
+    width: 140px;
+    height: 80px;
+    margin: 20px;
+    transform: rotateY(180deg);
+  }
+  
+  .title {
+    text-align: center;
+    flex: 1;
+    font-size: 50px;
+    line-height: .4;
+    font-weight: bold;
+    color: #FB4545;
+  }
+  
+  .sections {
+    font-size: 25px;
+    text-decoration: underline;
+    color: #FB4545;
+    font-weight: 500;
+  }
+  
+  .sections:hover {
+    color: #FFF1BF;
+  }
+  
+  .innerBox {
+    margin: 12px;
+    background-color: #FFF1BF;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-radius: 20;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  h2{
+    font-size: 70px;
+    color: #FB4545;
+    line-height: .05;
+  }
+  
+  #img {
+    width: 370px;
+    height: 370px;
+    align-self: center;
+    margin-bottom: 15px;
+    border: 10px solid #F9BD4A;
+    border-radius: 15px;
+  }
+  
+  #collectionTitle {
+    color: white;
+    font-size: 27px;
+    line-height: .1;
+    font-weight: 600;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #topSection {
+    flex: .6;
+  }
+  
+  #logo {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-left: 30px;
+    width: 0px;
+  }
+  
+  #login {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 30px;
+  }
+  
+  .loginPath:hover {
+    color: beige;
+    font-weight: 900;
+    background-color: #FB4545;;
+  }
+
+  .loginPath {
+    color: #FB4545;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  

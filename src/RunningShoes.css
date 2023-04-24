@@ -1,0 +1,80 @@
+.App {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #FB4545;
+    height: 100vh;
+  }
+  
+  .border {
+    background-color: #F9BD4A;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 30px;
+  }
+  
+  #page:hover {
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  #logo {
+    height: 70px;
+  }
+  
+  .section {
+    font-size: 21px;
+    text-decoration: underline;
+    color: #FB4545
+  }
+  
+  .section:hover {
+    color: #FFF1BF;
+  }
+  
+  .innerBox {
+    margin: 12px;
+    background-color: #FFF1BF;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-radius: 20;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #topSection {
+    flex: .6;
+  }
+  
+  #logo {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-left: 30px;
+    width: 0px;
+  }
+
+  #run {
+    font-size: 21px;
+    text-decoration: underline;
+    color: #FB4545;
+    font-weight: 900;
+  }
+  
+  #run:hover {
+    color: #FFF1BF;
+  }
+
+  .txt {
+    font-size: 50;
+    color: black;
+  }
+  
+  
+  
