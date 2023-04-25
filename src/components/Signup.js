@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Form, Button, Card, Alert, Container } from "react-bootstrap";
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import UserContext from"../context/UserContext";
 import axios from 'axios';
 

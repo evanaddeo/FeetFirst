@@ -1,8 +1,9 @@
 import './App.css';
 import Login from "./components/Login";
+import Signup from "./components/Signup";
 import ShoeList from "./components/ShoeList"
 import Home from "./components/Home.js";
-import {BrowserRouter as Router, Route, Routes, Link, contextProvider} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import UserContext from "./context/UserContext";
@@ -42,8 +43,9 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path="/" 
-            element={<Home login={false}/>}/>
+            element={<Home />}/>
           <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
           <Route path="/ShoeList" element={<ShoeList />} />
         </Routes>
       </Router>
