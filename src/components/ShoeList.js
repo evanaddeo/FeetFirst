@@ -4,12 +4,7 @@ import './ShoeList.css';
 
 const ShoeList = () => {
   const [shoes, setShoes] = useState([
-    {
-      id: 1,
-      name: '',
-      price: '',
-      image: '',
-    }
+    
   ]);
 
   const addShoe = (newShoe) => {
@@ -33,9 +28,15 @@ const ShoeList = () => {
     setShoes(updatedShoes);
   };
 
+  function clearFields() {
+    document.getElementById("n").value="";
+    document.getElementById("p").value="";
+    document.getElementById("i").value="";
+  }
+
   return (
     <div className="shoe-list-container">
-      <h2>Add a new listing</h2>
+      <h2 style={{color: "white"}}>Add a new listing</h2>
       <form className="shoe-list-form" onSubmit={(event) => {
           event.preventDefault();
           const newShoe = {
@@ -46,10 +47,10 @@ const ShoeList = () => {
           };
           addShoe(newShoe);
         }}>
-        <input type="text" name="name" placeholder="Name" />
-        <input type="text" name="price" placeholder="Price" />
-        <input type="text" name="image" placeholder="Image URL" />
-        <button type="submit">Add Shoe</button>
+        <input id="n" type="text" name="name" placeholder="Name" />
+        <input id="p" type="text" name="price" placeholder="Price" />
+        <input id="i" type="text" name="image" placeholder="Image URL" />
+        <button onClick={clearFields()} type="submit">Add Shoe</button>
       </form>
       <div className="shoe-list">
         {shoes.map((shoe) => (

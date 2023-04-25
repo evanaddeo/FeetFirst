@@ -1,7 +1,10 @@
 .shoe-list-container {
+  background-image: linear-gradient(to right, #FB4545 , #FFF1BF);
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  min-height: 100vh;
 }
 
 .shoe-list-form {
