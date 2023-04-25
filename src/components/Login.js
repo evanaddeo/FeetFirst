@@ -3,6 +3,7 @@ import { Form, Button, Card, Alert, Container} from "react-bootstrap";
 import axios from "axios";
 import UserContext from "../context/UserContext";
 import {useNavigate, Link } from "react-router-dom";
+import "../Login.css";
 
 function Login() {
     const [email, setEmail] = useState();
@@ -33,15 +34,16 @@ function Login() {
       }
 
     return (
+        <div className="main">
         <Container
-            className="d-flex align-items-center justify-content-center"
+            className="innerBox2"
             style={{ minHeight: "100vh"}}
         >
-            <div className="w-100" style={{ maxWidth: "400px"}}>
+            <div id="mainBox">
                 <>
                 <Card>
                     <Card.Body>
-                        <h2 className="text-center mb-4">Log In</h2>
+                        <h2>Log In</h2>
                         {error && <Alert variant="danger">{error}</Alert>}
                         <Form onSubmit={handleSubmit}>
                             <Form.Group id="email">
@@ -52,16 +54,18 @@ function Login() {
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control type="password" required onChange={e => setPassword(e.target.value)}/>
                             </Form.Group>
-                            <Button disabled={loading} className="w-100 mt-2" type="submit">
+                            <Button disabled={loading} className="btn" type="submit">
                                 Log In
                             </Button>
                         </Form>
                     </Card.Body>
                 </Card>
                 <div className="w-100 text-center mt-2">Need an account?<Link to="/Signup">Sign up</Link></div>
+                <img className="imagey" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Running_shoe_icon.png/640px-Running_shoe_icon.png" alt="shoes" />
                 </>
             </div>
         </Container>
+        </div>
         );
     }
 

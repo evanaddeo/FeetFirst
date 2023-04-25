@@ -3,6 +3,7 @@ import { Form, Button, Card, Alert, Container } from "react-bootstrap";
 import { useNavigate, Link } from 'react-router-dom';
 import UserContext from"../context/UserContext";
 import axios from 'axios';
+import "../Signup.css";
 
 function Signup() {
 	const [email, setEmail] = useState();
@@ -40,18 +41,19 @@ function Signup() {
         }
 
 	return (
+		<div className="main">
 		<Container
-			className="d-flex align-items-center justify-content-center"
+			className="innerBox2"
 			style={{ minHeight: "100vh" }}
 		>
-			<div className="w-100" style={{ maxWidth: "400px" }}>
+			<div id="mainBox">
 			<>
 				<Card>
 					<Card.Body>
-						<h2 className="text-center mb-4">Sign Up</h2>
+						<h2>Sign Up</h2>
 						{error && <Alert variant="danger">{error}</Alert>}
-						<Form onSubmit={handleSubmit}>
-							<Form.Group id="username">
+						<Form onSubmit={handleSubmit} id="bigtitles">
+							<Form.Group id="username" className="box">
 								<Form.Label>Username</Form.Label>
 								<Form.Control
 									type="name"
@@ -59,7 +61,7 @@ function Signup() {
 									onChange={(e) => setUsername (e.target.value)}
 								/>
 							</Form.Group>
-							<Form.Group id="email">
+							<Form.Group id="email" className="box">
 								<Form.Label>Email</Form.Label>
 								<Form.Control
 									type="email"
@@ -67,7 +69,7 @@ function Signup() {
 									onChange={(e) => setEmail(e.target.value)}
 								/>
 							</Form.Group>
-							<Form.Group id="password">
+							<Form.Group id="password" className="box">
 								<Form.Label>Password</Form.Label>
 								<Form.Control
 									type="password"
@@ -75,7 +77,7 @@ function Signup() {
 									onChange={(e) => setPassword(e.target.value)}
 								/>
 							</Form.Group>
-							<Form.Group id="password-confirm">
+							<Form.Group id="password-confirm" className="box">
 								<Form.Label>Password Confirmation</Form.Label>
 								<Form.Control
 									type="password"
@@ -93,9 +95,11 @@ function Signup() {
 						<div className="w-100 text-center mt-2">
 							Already have an account?<Link to="/Login">Log in</Link>
 						</div>
+						<img className="imagey" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Running_shoe_icon.png/640px-Running_shoe_icon.png" alt="shoes" />
 					</>
 				</div>
 			</Container>
+		</div>
 		);
 }
 

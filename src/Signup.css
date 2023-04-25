@@ -35,16 +35,20 @@
     margin-bottom: 70px;
   }
 
-  #email {
+  #username {
     margin-top: 50px;
     display: flex;
     justify-content: flex-end;
   }
 
+  #email {
+    margin-top: 5px;
+    display: flex;
+  }
+
   #password {
     margin-top: 5px;
     display: flex;
-    justify-content: flex-end;
   }
 
   .btn {
@@ -58,5 +62,6 @@
     height: 200px;
     margin-top: 80px;
   }
+
 
   
