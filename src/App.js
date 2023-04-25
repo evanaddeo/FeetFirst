@@ -7,12 +7,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import UserContext from "./context/UserContext";
 
-const express = require("express");
-const app = express();
-
-const users = require("./routes/api/users");
-app.use("./api/users", users);
-
 const App = () => {
   const [userData, setUserData] = useState({
     token: undefined,
@@ -58,4 +52,3 @@ const App = () => {
 }
 
 export default App;
-
