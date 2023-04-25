@@ -14,24 +14,22 @@ function Login() {
     const { setUserData } = useContext(UserContext);
 
     async function handleSubmit(e) {
-          e.preventDefault();
-          setLoading(true);
-          try{
-              const loginUser = { email, password };
-    
-              const loginRes = await axios.post("http://localhost:8082/api/users/login", loginUser)
-              setUserData({
-                  token: loginRes.data.token,
-                  user: loginRes.data.user,
-              });
-
-              localStorage.setItem("auth-token", loginRes.data.token);
-              navigate('/');
-          } catch (err) {
-              setLoading(false);
-              err.response.data.msg && setError(err.response.data.msg);
-          }
-      }
+        e.preventDefault();
+        setLoading(true);
+        try{
+            const loginUser = { email, password };
+            const loginRes = await axios.post("http://localhost:8082/api/users/login", loginUser)
+            setUserData({
+                token: loginRes.data.token,
+                user: loginRes.data.user,
+            });
+            localStorage.setItem("auth-token", loginRes.data.token);
+            navigate('/');
+        } catch (err) {
+            setLoading(false);
+            err.response.data.msg && setError(err.response.data.msg);
+        }
+    }
 
     return (
         <div className="main">
@@ -59,7 +57,7 @@ function Login() {
                             </Button>
                         </Form>
                     </Card.Body>
-                </Card>
+                </Card> 
                 <div className="w-100 text-center mt-2">Need an account?<Link to="/Signup">Sign up</Link></div>
                 <img className="imagey" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Running_shoe_icon.png/640px-Running_shoe_icon.png" alt="shoes" />
                 </>

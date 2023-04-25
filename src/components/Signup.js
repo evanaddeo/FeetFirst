@@ -17,28 +17,27 @@ function Signup() {
 	const { setUserData } = useContext(UserContext);
 
     async function handleSubmit(e) {
-            e.preventDefault();
-            setLoading(true);
-            try{
-                const newUser = { email, password, confirmPassword, username };
-        
-                await axios.post("http://localhost:8082/api/users/signup", newUser);
-                const loginRes = await axios.post("http://localhost:8082/api/users/login", {
-                    email,
-                    password,
-                });
-                setUserData({
-                    token: loginRes.data.token,
-                    user: loginRes.data.user,
-                });
-                localStorage.setItem("auth-token", loginRes.data.token);
-                setLoading(false);
-                navigate('/');
-            } catch (err) {
-                setLoading(false);
-                err.response.data.msg && setError(err.response.data.msg);
-            }
-        }
+		e.preventDefault();
+		setLoading(true);
+		try{
+			const newUser = { email, password, confirmPassword, username };
+			await axios.post("http://localhost:8082/api/users/signup", newUser);
+			const loginRes = await axios.post("http://localhost:8082/api/users/login", {
+				email,
+				password,
+			});
+			setUserData({
+				token: loginRes.data.token,
+				user: loginRes.data.user,
+			});
+			localStorage.setItem("auth-token", loginRes.data.token);
+			setLoading(false);
+			navigate('/');
+		} catch (err) {
+			setLoading(false);
+			err.response.data.msg && setError(err.response.data.msg);
+		}
+	}
 
 	return (
 		<div className="main">
