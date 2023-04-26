@@ -28,12 +28,6 @@ const ShoeList = () => {
     setShoes(updatedShoes);
   };
 
-  function clearFields() {
-    document.getElementById("n").value="";
-    document.getElementById("p").value="";
-    document.getElementById("i").value="";
-  }
-
   return (
     <div className="shoe-list-container">
       <h2 style={{color: "white"}}>Add a new listing</h2>
@@ -46,11 +40,14 @@ const ShoeList = () => {
             image: event.target.image.value,
           };
           addShoe(newShoe);
+          document.getElementById("n").value="";
+          document.getElementById("p").value="";
+          document.getElementById("i").value="";
         }}>
         <input id="n" type="text" name="name" placeholder="Name" />
         <input id="p" type="text" name="price" placeholder="Price" />
         <input id="i" type="text" name="image" placeholder="Image URL" />
-        <button onClick={clearFields()} type="submit">Add Shoe</button>
+        <button type="submit">Add Shoe</button>
       </form>
       <div className="shoe-list">
         {shoes.map((shoe) => (

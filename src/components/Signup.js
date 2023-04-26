@@ -84,7 +84,10 @@ function Signup() {
 									onChange={(e) => setConfirmPassword(e.target.value)}
 								/>
 							</Form.Group>
-							<Button disabled={loading} className="w-100 mt-2" type="submit">
+							<Button onClick={ () => {
+                                    navigate("/");
+                                }}
+								disabled={loading} className="w-100 mt-2" type="submit">
 								Sign Up
 							</Button>
 						</Form>
