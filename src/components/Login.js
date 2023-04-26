@@ -53,7 +53,7 @@ function Login() {
                                 <Form.Control type="password" required onChange={e => setPassword(e.target.value)}/>
                             </Form.Group>
                             <Button onClick={ () => {
-                                    navigate("/");
+                                    navigate("/Home");
                                 }}
                                 disabled={loading} className="btn" type="submit">
                                 Log In
